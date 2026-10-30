@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Back to Roster Logbook</title>
+<style>
+body{font:16px/1.5 system-ui,sans-serif;margin:3rem auto;max-width:28rem;padding:0 16px;color:#1d2430;background:#fff}
+a.btn{display:inline-block;margin:1rem 0;padding:.8rem 1.2rem;border-radius:10px;background:#1f5fbf;color:#fff;text-decoration:none;font-weight:600}
+.small{font-size:.9rem;color:#5a6977}
+@media (prefers-color-scheme:dark){body{color:#e6e9ee;background:#0f141b}.small{color:#90a0ae}}
+</style>
+</head>
+<body>
+<h1>Tesla sign-in done</h1>
+<p>Tap to go back to Roster Logbook and finish.</p>
+<a id="go" class="btn" href="#">Open Roster Logbook</a>
+<p class="small">This page only hands the sign-in back to the app on your phone. Nothing is stored or sent anywhere.</p>
+<script>
+  // Pass the one-time code straight to the app, then drop it from the address bar and history.
+  var q = location.search || "";
+  document.getElementById("go").href =
+    "intent://tesla/callback" + q + "#Intent;scheme=rosterlogbook;package=com.jordancable.rosterlogbook;end";
+  history.replaceState(null, "", location.pathname);
+</script>
+</body>
+</html>

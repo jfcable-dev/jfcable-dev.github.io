@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.jordancable.rosterlogbook",
+      "sha256_cert_fingerprints": ["F3:BD:63:F6:19:71:89:0D:A1:ED:63:EC:2B:D5:92:0E:89:06:C2:97:6E:18:1F:95:77:49:D9:DB:44:70:10:CD"]
+    }
+  }
+]
